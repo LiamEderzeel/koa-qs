@@ -1,0 +1,31 @@
+{
+  "name": "koa-qs-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/ems.index.js",
+  "types": "./lib/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/esm/index.js",
+      "require": "./lib/cjs/index.js",
+      "types": "./lib/esm/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Liam Ederzeel",
+  "license": "MIT",
+  "dependencies": {
+    "@types/qs": "^6.9.14",
+    "koa": "^2.15.2",
+    "merge-descriptors": "^2.0.0",
+    "qs": "^6.12.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.15.0",
+    "typescript": "^5.4.3"
+  }
+}
